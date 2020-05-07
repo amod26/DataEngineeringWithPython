@@ -1,0 +1,21 @@
+# Changes made
+
+In to_json() from data_generator.py, changed "student_id", {self.student.id} to  "student_id": "{self.student.id}" because the resulting log file wasn't in correct json key-value format.
+
+# Objective
+
+The pipeline should culminate in the creation of a database table that would enable
+a data analyst to easily report on the batches with the most students that
+have completed at least 3 lessons (definitions found in Data Sources section).
+
+# Solution (Data Pipeline.py)
+
+After executing the data_generator.py file, data is stored in the sqlite db with creation of a log file.
+We extracted the log file data and modelled it in such a way that the Data analyst(s) can easily query reports from the new table.
+You can find the aggregated view of Analyst report in "Analyst Report.sql" and the detailed view in "Analyst Report Detailed.sql".
+
+# Challenges 
+
+1. Extracting the log file data, modelling it using pandas dataframe and loading the modelled data using sqlalchemy in new table.
+2. Some lesson_id, lesson_title were missing and had to be filled. loaded the lessons table data into an dataframe and merged both lessons table dataframe & log file data dataframe into a new dataframe "less1" and finally loading it into a new table "New_data" from where Data Analyst(s) will be querying reports.
+3. Splitting the results column into "received" & "total" to give a better understanding of the result thus making it easier for querying.

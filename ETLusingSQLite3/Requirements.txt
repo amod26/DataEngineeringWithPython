@@ -1,0 +1,11 @@
+requests
+sqlite3
+datetime
+time
+random
+names
+sqlalchemy
+flask
+flask_restful 
+sqlalchemy
+json
