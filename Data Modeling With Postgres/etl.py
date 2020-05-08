@@ -7,22 +7,36 @@ from sql_queries import *
 
 def process_song_file(cur, filepath):
     # open song file
+    """
+    Reads the filepath to get the song file and load it into an Dataframe. 
+    """
     song_files = get_files('data/song_data')
     filepath = song_files[0]
     df = pd.read_json(filepath, lines=True)
 
 
     # insert song record
+    """
+    Converts the data into list inside the dataframe and implements both the song_table_insert & song_data query.
+    """
     song_data = list(df[['song_id','title','artist_id','year','duration']].values[0])
     cur.execute(song_table_insert, song_data)
     
     # insert artist record
+    """
+    Selects first record and convert the data into list and implement the artist_table_insert query.
+    """
     artist_data = list(df[['artist_id','artist_name','artist_location','artist_latitude','artist_longitude']].values[0])
     cur.execute(artist_table_insert, artist_data)
 
 
 def process_log_file(cur, filepath):
-    # open log file
+    
+    """
+    opens log file
+    performs ETL on the second dataset: log_data
+    selects the first log file and loads and views the data
+    """
     log_files = get_files('data/log_data')
     filepath = log_files[0]
     df = pd.read_json(filepath, lines=True)
@@ -37,6 +51,7 @@ def process_log_file(cur, filepath):
  
     
     # insert time data records
+    
     time_data = [t, t.dt.hour, t.dt.day, t.dt.weekofyear, t.dt.month, t.dt.year, t.dt.weekday]
     column_labels = ('timestamp','hour','day','week of year','month','year','weekday') 
     time_df = pd.DataFrame(dict(zip(column_labels,time_data)))
@@ -70,7 +85,10 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
-    # get all files matching extension from directory
+    """
+    gets all files matching extension from directory
+    """ 
+    
     all_files = []
     for root, dirs, files in os.walk(filepath):
         files = glob.glob(os.path.join(root,'*.json'))
