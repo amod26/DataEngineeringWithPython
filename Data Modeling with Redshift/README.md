@@ -10,7 +10,7 @@
 - Fact table  <br>
     - songplays: log data associated with song plays songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent <br>
 
-- Dimentions table <br>
+- Dimension tables <br>
     - users: users in the app user_id, first_name, last_name, gender, level <br>
 
     - songs: songs in music database song_id, title, artist_id, year, duration <br>
