@@ -5,10 +5,13 @@
 - We created a Postgres database schema and ETL pipeline for this analysis with tables designed to optimize queries on song play analysis.
 
 ## Schema Design<br>
+
 ### Fact table <br>
+
    - songplays: Records in log data associated with song plays i.e. records with page NextSong songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent <br>
  
 ### Dimension table <br>
+
    - users: users in the app user_id, first_name, last_name, gender, level
 
    - songs: songs in music database song_id, title, artist_id, year, duration
@@ -19,10 +22,12 @@
 
  
 ### Scripts<br>
+
 - sql_queries.py - includes (CRUD) queries <br>
 - create_tables.py - Resets the database by creating and dropping tables. <br>
 - etl.py - loads the json files for songs and logs dataset from the data folder on the db in star schema structure <br>
 
 ### To Run: <br>
+
 1. python create_tables.py <br>
 2. python etl.py
