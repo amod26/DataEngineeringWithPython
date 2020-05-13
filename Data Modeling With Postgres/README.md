@@ -23,7 +23,7 @@
  
 ### Scripts<br>
 
-- sql_queries.py - includes (CRUD) queries <br>
+- sql_queries.py - Includes (CRUD) queries <br>
 - create_tables.py - Resets the database by creating and dropping tables. <br>
 - etl.py - loads the json files for songs and logs dataset from the data folder on the db in star schema structure <br>
 
