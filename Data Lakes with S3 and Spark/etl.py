@@ -70,10 +70,10 @@ def process_log_data(spark, input_data, output_data):
     df = log_data
 
     # extract columns for users table    
-    artists_table = df.select(['userId','firstName','lastName','gender','level']).distinct()
+    users_table = df.select(['userId','firstName','lastName','gender','level']).distinct()
     
     # write users table to parquet files
-    artists_table.write.parquet(output_data+"users_table/",  mode="overwrite")
+    users_table.write.parquet(output_data+"users_table/",  mode="overwrite")
 
     # create timestamp column from original timestamp column
     get_timestamp = udf(lambda x:datetime.fromtimestamp(int(x)/1000), TimestampType())
