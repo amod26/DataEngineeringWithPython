@@ -8,7 +8,7 @@
 
 ### Fact Table 
     - songplays: records in log data associated with song plays i.e. records with page NextSong
-       songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+                songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
         
 ### Dimension Tables 
     - users: users in the app (user_id, first_name, last_name, gender, level) 
@@ -20,4 +20,8 @@
 ## Scripts <br>
  - etl.py (file containing CRUD, ETL functions) <br>
  - dl.cfg (AWS credentials)
+ 
+## How to run scripts: <br> 
+   - dl.cfg (Enter your AWS credentials) <br>
+   - etl.py (run python etl.py in terminal)
 
