@@ -20,3 +20,8 @@
 - sql_queries.py
 - etl.py 
 - us-cities-demographics.csv
+
+### To Run:
+1. create_tables.py
+2. etl.py 
+
