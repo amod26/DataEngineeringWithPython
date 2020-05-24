@@ -1,7 +1,7 @@
 # Capstone Project 
 
 - We will be parsing data from a csv file containing the demographics of different races in 50 states of America. <br>
-- After parsing, we will model the data into different postgres facts & dim tables to be used for analytical purpose.
+- After parsing, we will model the data into facts & dim tables to be used further for analytical purpose.
 
 
 ## Schema Design <br> 
