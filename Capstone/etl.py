@@ -26,8 +26,7 @@ def process_log_file(cur,conn,cur2):
 
     
     for i, row in city_info.iterrows():
-        city1 = (row.City,row.State_Code,row.State)#.encode('utf-8') 
-#         city1 = u' '.join((row.City,row.State_Code,row.State)).encode('utf-8') .strip()
+        city1 = (row.City,row.State_Code,row.State) 
 
         try:
             cur.execute(city_table_insert,city1)
