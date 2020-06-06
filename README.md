@@ -1,4 +1,4 @@
-# DataEngineeringWithPython
+# Data Engineering With Python
 
 - This repo contains different projects using **Python** language and different SQL & NoSQL databases like **PostgreSQL, Apache Cassandra, SQlite3.**
 - Prime focus of this projects are to get data from different sources and load into some database based on the nature and usecase of the project. 
