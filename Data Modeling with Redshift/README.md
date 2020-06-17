@@ -21,7 +21,7 @@
 
 ## Staging table  <br>
 
-- _staging_events_ dumping event log files from S3 directly in this table _stage_songs_ dumping songs files from S3 directly in this table. <br>
+- _staging_events_ dumping event log files from S3 directly in this table. <br>
 
 ## Scripts <br>
 - dwh.cfg (contains the details to connect to the redshift cluster) <br>
