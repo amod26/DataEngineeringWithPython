@@ -1,8 +1,6 @@
 # Data Pipelines with Airflow
 
 
-## About Me: <br>
-
 - This project will introduce to the core concepts of Apache Airflow. We will be creating our own custom operators to perform tasks such as staging the data, filling the data warehouse, and running checks on the data as the final step. <br>
 
 - A music streaming company, Sparkify, has decided that it is time to introduce more automation and monitoring to their data warehouse ETL pipelines and come to the conclusion that the best tool to achieve this is Apache Airflow.
